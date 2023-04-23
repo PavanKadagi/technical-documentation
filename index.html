@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Technical Documentation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      :root {
+        --text-color: rgb(24, 24, 29);
+        --button-color: rgb(98, 84, 243);
+        --shadow-support: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      .container {
+        max-width: 120rem;
+        margin: 0 auto;
+      }
+      .grid {
+        display: grid;
+        grid-gap: 3rem;
+      }
+      .grid-two-column {
+        grid-template-columns: 22rem auto;
+      }
+      p {
+        color: var(--text-color);
+        font-size: 1.4rem;
+        opacity: 0.7;
+        line-height: 1.5;
+        margin: 1rem;
+        font-weight: 300;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--text-color);
+        margin: 1rem 0;
+      }
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: var(--text-color);
+        margin: 1rem 0;
+      }
+
+      button {
+        margin: 0.5rem 0;
+        /* max-width: auto; */
+        width: 100%;
+        text-align: start;
+        background-color: var(--button-color);
+        color: white;
+        font-weight: 300;
+        padding: 0.5rem 0rem 0.5rem 0.4rem;
+        /* padding: 1rem 9rem 1rem 1rem; */
+        border: none;
+        text-transform: uppercase;
+        /* text-align: center; */
+        cursor: pointer;
+        color: rgb(98 84 243);
+        font-size: 1.4rem;
+        transition: all 0.3s ease;
+        background-color: rgb(0 0 0 /0%);
+        border: 0.1rem solid rgb(98 84 243);
+        /* border-radius: 5rem; */
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+
+        /* margin: 2rem auto; */
+
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+      button:hover {
+        box-shadow: 0 2rem 2rem 0 rgb(132, 144, 255/30%);
+        box-shadow: var(--shadow-support);
+        transform: scale(0.96);
+        background-color: rgb(98 84 243);
+        color: #fff;
+      }
+      .example {
+        background-color: #f1f1f1;
+        padding: 2rem;
+        margin: 1rem 0;
+      }
+      pre {
+        padding: 1.4rem 0 0 0;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        /* opacity: 0.7; */
+        line-height: 1.5;
+        margin-top: 2rem;
+        font-weight: 300;
+        background-color: #fff;
+        border-left: 4px solid #04aa6d;
+      }
+      ul {
+        padding: 2rem 4rem;
+      }
+      li {
+        color: var(--text-color);
+        font-size: 1.4rem;
+        opacity: 0.7;
+        /* line-height: 1.5; */
+        font-weight: 300;
+      }
+      .tip {
+        background-color: wheat;
+        padding: 2rem;
+      }
+      span {
+        color: red;
+      }
+      .example-error {
+        border-left: 4px solid red;
+      }
+      .example-command {
+        background: black;
+        color: white;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container grid grid-two-column">
+      <div>
+        <h3>Documentation Menu</h3>
+        <a href="#what-is-java"><button>What is java</button></a>
+        <a href="#object-and-Classes"><button>Object and Classes</button></a>
+        <a href="#Java-Inheritance"><button>Inheritance</button></a>
+        <a href="#Java-Polymorphism"><button>Polymorphism</button></a>
+        <a href="#Abstraction"><button>Abstraction</button></a>
+        <a href="#Encapsulation"><button>Encapsulation</button></a>
+      </div>
+      <div>
+        <div id="what-is-java">
+          <h2>What is Java?</h2>
+          <p>
+            Java is a programming language and computing platform first released
+            by Sun Microsystems in 1995. It has evolved from humble beginnings
+            to power a large share of today’s digital world, by providing the
+            reliable platform upon which many services and applications are
+            built. New, innovative products and digital services designed for
+            the future continue to rely on Java, as well.
+          </p>
+          <p>
+            While most modern Java applications combine the Java runtime and
+            application together, there are still many applications and even
+            some websites that will not function unless you have a desktop Java
+            installed. Java.com, this website, is intended for consumers who may
+            still require Java for their desktop applications – specifically
+            applications targeting Java 8. Developers as well as users that
+            would like to learn Java programming should visit the dev.java
+            website instead and business users should visit oracle.com/java for
+            more information.
+          </p>
+          <div class="example">
+            <p>Let us now look at program :</p>
+            <pre>
+                public class Main {
+                  public static void main(String[] args){  
+                       System.out.println("Hello World");
+                 }
+              }
+            </pre>
+          </div>
+        </div>
+        <div id="object-and-Classes">
+          <h2>Java Classes/Objects</h2>
+          <p>Java is an object-oriented programming language.</p>
+          <p>
+            Everything in Java is associated with classes and objects, along
+            with its attributes and methods. For example: in real life, a car is
+            an object. The car has <b>attributes</b>, such as weight and color,
+            and <b>methods</b>, such as drive and brake.
+          </p>
+          <p>
+            A Class is like an object constructor, or a "blueprint" for creating
+            objects.
+          </p>
+          <h3>Create a Class</h3>
+          <p>To create a class, use the keyword class:</p>
+          <div class="example">
+            <h3>Main.java</h3>
+            <p>Create a class named "Main" with a variable x:</p>
+            <pre>
+                public class Main {
+                  int x = 5;
+                }
+            </pre>
+          </div>
+          <h3>Create an Object</h3>
+          <p>
+            In Java, an object is created from a class. We have already created
+            the class named Main, so now we can use this to create objects
+          </p>
+          <p>
+            To create an object of Main, specify the class name, followed by the
+            object name, and use the keyword new:
+          </p>
+          <div class="example">
+            <h3>Example</h3>
+            <p>
+              Create an object called "myObj" and print the value of x:
+            </p>
+            <pre>
+                public class Main {
+                  int x = 5;
+                
+                  public static void main(String[] args) {
+                    Main myObj = new Main();
+                    System.out.println(myObj.x);
+                  }
+                }                
+            </pre>
+          </div>
+          <h3>Multiple Objects</h3>
+          <p>You can create multiple objects of one class:</p>
+          <div class="example">
+            <h3>Example</h3>
+            <p>Create two objects of Main:</p>
+            <pre>
+                public class Main {
+                  int x = 5;
+                
+                  public static void main(String[] args) {
+                    Main myObj1 = new Main();  // Object 1
+                    Main myObj2 = new Main();  // Object 2
+                    System.out.println(myObj1.x);
+                    System.out.println(myObj2.x);
+                  }
+                }
+            </pre>
+          </div>
+          <h3>Using Multiple Classes</h3>
+          <p>
+            You can also create an object of a class and access it in another
+            class. This is often used for better organization of classes (one
+            class has all the attributes and methods, while the other class
+            holds the main() method (code to be executed)).
+          </p>
+          <p>
+            Remember that the name of the java file should match the class name.
+            In this example, we have created two files in the same
+            directory/folder:
+          </p>
+          <ul>
+            <li>Main.java</li>
+            <li>Second.java</li>
+          </ul>
+          <div class="example">
+            <h3>Main.java</h3>
+            <pre>
+                public class Main {
+                  int x = 5;
+                }
+            </pre>
+          </div>
+          <div class="example">
+            <h3>Second.java</h3>
+            <pre>
+                class Second {
+                  public static void main(String[] args) {
+                    Main myObj = new Main();
+                    System.out.println(myObj.x);
+                  }
+                }
+            </pre>
+          </div>
+          <p>When both files have been compiled:</p>
+          <div class="example">
+            <pre class="example-command">
+                C:\Users\Your Name>javac Main.java
+                C:\Users\Your Name>javac Second.java
+            </pre>
+          </div>
+          <p>Run the Second.java file:</p>
+          <div class="example">
+            <pre class="example-command">
+                C:\Users\Your Name>java Second
+            </pre>
+          </div>
+          <p>And the output will be:</p>
+          <div class="example">
+            <pre class="example-command">
+                  5
+              </pre
+            >
+          </div>
+        </div>
+        <div id="Java-Inheritance">
+          <h2>Java Inheritance (Subclass and Superclass)</h2>
+          <p>
+            In Java, it is possible to inherit attributes and methods from one
+            class to another. We group the "inheritance concept" into two
+            categories:
+          </p>
+          <ul>
+            <li>
+              <b>subclass</b> (child) - the class that inherits from another
+              class
+            </li>
+            <li><b>superclass</b> (parent) - the class being inherited from</li>
+          </ul>
+          <p>To inherit from a class, use the extends keyword.</p>
+          <p>
+            In the example below, the Car class (subclass) inherits the
+            attributes and methods from the Vehicle class (superclass):
+          </p>
+          <div class="example">
+            <h3>Example</h3>
+            <div style="overflow-x: auto;">
+              <pre>
+                class Vehicle {
+                  protected String brand = "Ford";        // Vehicle attribute
+                  public void honk() {                    // Vehicle method
+                    System.out.println("Tuut, tuut!");
+                  }
+                }
+                
+                class Car extends Vehicle {
+                  private String modelName = "Mustang";    // Car attribute
+                  public static void main(String[] args) {
+                
+                    // Create a myCar object
+                    Car myCar = new Car();
+                
+                    // Call the honk() method (from the Vehicle class) on the myCar object
+                    myCar.honk();
+                
+                    // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
+                    System.out.println(myCar.brand + " " + myCar.modelName);
+                  }
+                }
+            </pre
+              >
+            </div>
+          </div>
+          <div class="tip">
+            <p>
+              Did you notice the
+              <span>protected</span> modifier in Vehicle?
+            </p>
+            <p>
+              We set the <b>brand</b> attribute in <b>Vehicle</b> to a protected
+              access modifier. If it was set to private, the Car class would not
+              be able to access it.
+            </p>
+            <h3>Why And When To Use "Inheritance"?</h3>
+            <p>
+              - It is useful for code reusability: reuse attributes and methods
+              of an existing class when you create a new class.
+            </p>
+            <p>
+              <b>Tip</b>: Also take a look at the next chapter, Polymorphism,
+              which uses inherited methods to perform different tasks.
+            </p>
+          </div>
+          <h3>The final Keyword</h3>
+          <p>
+            If you don't want other classes to inherit from a class, use the
+            final keyword:
+          </p>
+          <div class="example" style="background: #ffdddd;">
+            <p>
+              If you try to access a <span>final</span> class, Java will
+              generate an error:
+            </p>
+            <pre class="example-error">
+                final class Vehicle {
+                  ...
+                }
+                
+                class Car extends Vehicle {
+                  ...
+                }
+            </pre>
+            <p>The output will be something like this:</p>
+            <pre class="example-command">
+                Main.java:9: error: cannot inherit from final Vehicle
+                class Main extends Vehicle {
+                                  ^
+                1 error)
+            </pre>
+          </div>
+        </div>
+        <div id="Java-Polymorphism">
+          <h2>Java Polymorphism</h2>
+          <p>
+            Polymorphism means "many forms", and it occurs when we have many
+            classes that are related to each other by inheritance.
+          </p>
+          <p>
+            Like we specified in the previous chapter; <b>Inheritance</b> lets
+            us inherit attributes and methods from another class.
+            <b>Polymorphism</b> uses those methods to perform different tasks.
+            This allows us to perform a single action in different ways.
+          </p>
+          <p>
+            For example, think of a superclass called <span>Animal</span> that
+            has a method called <span>animalSound()</span>. Subclasses of
+            Animals could be Pigs, Cats, Dogs, Birds - And they also have their
+            own implementation of an animal sound (the pig oinks, and the cat
+            meows, etc.):
+          </p>
+          <div class="example">
+            <h3>Example</h3>
+            <pre>
+                class Animal {
+                  public void animalSound() {
+                    System.out.println("The animal makes a sound");
+                  }
+                }
+                
+                class Pig extends Animal {
+                  public void animalSound() {
+                    System.out.println("The pig says: wee wee");
+                  }
+                }
+                
+                class Dog extends Animal {
+                  public void animalSound() {
+                    System.out.println("The dog says: bow wow");
+                  }
+                }
+            </pre>
+          </div>
+          <div class="tip">
+            <p>
+              Remember from the Inheritance chapter that we use the extends
+              keyword to inherit from a class.
+            </p>
+          </div>
+          <p>
+            Now we can create <span>Pig</span> and <span>Dog</span> objects and
+            call the <span>animalSound()</span> method on both of them:
+          </p>
+          <div class="example">
+            <h3>Example</h3>
+            <pre>
+                  class Animal {
+                    public void animalSound() {
+                      System.out.println("The animal makes a sound");
+                    }
+                  }
+                  
+                  class Pig extends Animal {
+                    public void animalSound() {
+                      System.out.println("The pig says: wee wee");
+                    }
+                  }
+                  
+                  class Dog extends Animal {
+                    public void animalSound() {
+                      System.out.println("The dog says: bow wow");
+                    }
+                  }
+                  
+                  class Main {
+                    public static void main(String[] args) {
+                      Animal myAnimal = new Animal();  // Create a Animal object
+                      Animal myPig = new Pig();  // Create a Pig object
+                      Animal myDog = new Dog();  // Create a Dog object
+                      myAnimal.animalSound();
+                      myPig.animalSound();
+                      myDog.animalSound();
+                    }
+                  }
+              </pre
+            >
+          </div>
+          <div class="tip">
+            <h3>Why And When To Use "Inheritance" and "Polymorphism"?</h3>
+            <p>
+              - It is useful for code reusability: reuse attributes and methods
+              of an existing class when you create a new class.
+            </p>
+          </div>
+        </div>
+        <div id="Abstraction">
+          <h2>Abstract Classes and Methods</h2>
+          <p>
+            Data <b>abstraction</b> is the process of hiding certain details and
+            showing only essential information to the user.
+          </p>
+          <p>
+            Abstraction can be achieved with either <b>abstract classes</b> or
+            <b>interfaces</b> (which you will learn more about in the next
+            chapter).
+          </p>
+          <p>
+            The <span>abstract</span> keyword is a non-access modifier, used for
+            classes and methods:
+          </p>
+          <ul>
+            <li>
+              <b>Abstract class:</b> is a restricted class that cannot be used
+              to create objects (to access it, it must be inherited from another
+              class).
+            </li>
+            <li>
+              <b>Abstract method:</b> can only be used in an abstract class, and
+              it does not have a body. The body is provided by the subclass
+              (inherited from).
+            </li>
+          </ul>
+          <p>An abstract class can have both abstract and regular methods:</p>
+          <div class="example">
+            <pre>
+                abstract class Animal {
+                  public abstract void animalSound();
+                  public void sleep() {
+                    System.out.println("Zzz");
+                  }
+                }
+            </pre>
+          </div>
+          <p>
+            From the example above, it is not possible to create an object of
+            the Animal class:
+          </p>
+          <div class="example" style="background: #ffdddd;">
+            <pre class="example-error">
+                Animal myObj = new Animal(); // will generate an error
+            </pre>
+          </div>
+          <p>
+            To access the abstract class, it must be inherited from another
+            class. Let's convert the Animal class we used in the Polymorphism
+            chapter to an abstract class
+          </p>
+          <div class="tip">
+            <p>
+              Remember from the Inheritance chapter that we use the extends
+              keyword to inherit from a class.
+            </p>
+          </div>
+          <div class="example">
+            <h3>Example</h3>
+            <pre>
+                // Abstract class
+                abstract class Animal {
+                  // Abstract method (does not have a body)
+                  public abstract void animalSound();
+                  // Regular method
+                  public void sleep() {
+                    System.out.println("Zzz");
+                  }
+                }
+                
+                // Subclass (inherit from Animal)
+                class Pig extends Animal {
+                  public void animalSound() {
+                    // The body of animalSound() is provided here
+                    System.out.println("The pig says: wee wee");
+                  }
+                }
+                
+                class Main {
+                  public static void main(String[] args) {
+                    Pig myPig = new Pig(); // Create a Pig object
+                    myPig.animalSound();
+                    myPig.sleep();
+                  }
+                }
+            </pre>
+          </div>
+          <div class="tip">
+            <h3>Why And When To Use Abstract Classes and Methods?</h3>
+            <p>
+              To achieve security - hide certain details and only show the
+              important details of an object.
+            </p>
+            <p>
+              <b>Note:</b> Abstraction can also be achieved with Interfaces,
+              which you will learn more about in the next chapter.
+            </p>
+          </div>
+        </div>
+        <div id="Encapsulation">
+          <h2>Encapsulation</h2>
+          <p>
+            The meaning of <b>Encapsulation</b>, is to make sure that
+            "sensitive" data is hidden from users. To achieve this, you must:
+          </p>
+          <ul>
+            <li>declare class variables/attributes as <span>private</span></li>
+            <li>
+              provide public get and set methods to access and update the value
+              of a <span>private</span> variable
+            </li>
+          </ul>
+          <h3>Get and Set</h3>
+          <p>
+            You learned from the previous chapter that
+            <span>private</span> variables can only be accessed within the same
+            class (an outside class has no access to it). However, it is
+            possible to access them if we provide public <b>get</b> and
+            <b>set</b> methods.
+          </p>
+          <p>
+            The <span>get</span> method returns the variable value, and the
+            <span>set</span> method sets the value.
+          </p>
+          <p>
+            Syntax for both is that they start with either <span>get</span> or
+            <span>set</span>, followed by the name of the variable, with the
+            first letter in upper case:
+          </p>
+          <div class="example">
+            <h3>Example</h3>
+            <pre>
+                public class Person {
+                  private String name; // private = restricted access
+                
+                  // Getter
+                  public String getName() {
+                    return name;
+                  }
+                
+                  // Setter
+                  public void setName(String newName) {
+                    this.name = newName;
+                  }
+                }
+            </pre>
+          </div>
+          <p>Example explained</p>
+          <p>
+            The <span>get</span> method returns the value of the variable
+            <span>name</span>.
+          </p>
+          <p>
+            The <span>set</span> method takes a parameter
+            <span>(newName)</span> and assigns it to the
+            <span>name</span> variable. The <span>this</span> keyword is used to
+            refer to the current object.
+          </p>
+          <p>
+            However, as the <span>name</span> variable is declared as
+            <span>private</span>, we <b>cannot</b>
+            access it from outside this class:
+          </p>
+          <div class="example" style="background: #ffdddd;">
+            <h3>Example</h3>
+            <pre class="example-error">
+                public class Main {
+                  public static void main(String[] args) {
+                    Person myObj = new Person();
+                    myObj.name = "John";  // error
+                    System.out.println(myObj.name); // error 
+                  }
+                }
+            </pre>
+          </div>
+          <p>
+            If the variable was declared as public, we would expect the
+            following output:
+          </p>
+          <div class="example">
+            <pre class="example-command">
+                John
+            </pre>
+          </div>
+          <p>
+            However, as we try to access a private variable, we get an error:
+          </p>
+          <div class="example">
+            <pre class="example-command">
+                MyClass.java:4: error: name has private access in Person
+                myObj.name = "John";
+                     ^
+            MyClass.java:5: error: name has private access in Person
+                System.out.println(myObj.name);
+                              ^
+            2 errors
+            </pre>
+          </div>
+          <p>
+            Instead, we use the getName() and setName() methods to access and
+            update the variable:
+          </p>
+          <div class="example">
+            <h3>Example</h3>
+            <pre>
+                public class Main {
+                  public static void main(String[] args) {
+                    Person myObj = new Person();
+                    myObj.setName("John"); // Set the value of the name variable to "John"
+                    System.out.println(myObj.getName());
+                  }
+                }
+                
+                // Outputs "John"
+            </pre>
+          </div>
+          <h3>Why Encapsulation?</h3>
+          <ul>
+            <li>Better control of class attributes and methods</li>
+            <li>
+              Class attributes can be made <b>read-only</b> (if you only use the
+              <span>get</span> method), or <b>write-only</b> (if you only use
+              the <span>set</span> method)
+            </li>
+            <li>
+              Flexible: the programmer can change one part of the code without
+              affecting other parts
+            </li>
+            <li>Increased security of data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
